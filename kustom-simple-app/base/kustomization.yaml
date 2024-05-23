@@ -1,0 +1,15 @@
+resources:
+- deployment.yaml
+- service.yaml
+
+commonLabels:
+  app: kustom-sample-app
+
+commonAnnotations:
+  app: kustom-sample-app-annontations
+
+namePrefix:
+  jmiller-
+
+nameSuffix:
+  -v1
