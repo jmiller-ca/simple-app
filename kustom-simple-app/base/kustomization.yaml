@@ -1,19 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    app: kustom-sample-app
 resources:
 - deployment.yaml
 - service.yaml
-
-commonLabels:
-  app: kustom-sample-app
-
 commonAnnotations:
   app: kustom-sample-app-annontations
-
-namePrefix:
-  jmiller-
-
-nameSuffix:
-  -v1
-
+namePrefix: jmiller-
+nameSuffix: -v1
 configMapGenerator:
-- name: nginx-config
-  env: nginx.conf
+- files:
+  - nginx.config
+  name: nginx-config
