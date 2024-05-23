@@ -4,6 +4,9 @@ metadata:
   name: kustom-sample-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: kustom-sample-app  
   template:
     spec:
       containers:
