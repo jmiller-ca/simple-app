@@ -3,13 +3,13 @@ resources:
 - service.yaml
 
 commonLabels:
-  app: kustomwebapp
+  app: kustom-sample-app
 
 commonAnnotations:
-  app: mykustom-annontations
+  app: kustom-sample-app-annontations
 
 namePrefix:
-  kustom-
+  jmiller-
 
 nameSuffix:
   -v1
