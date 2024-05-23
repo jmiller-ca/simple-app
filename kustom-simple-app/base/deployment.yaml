@@ -19,8 +19,8 @@ spec:
             name: kustom-sample-app-config 
         volumeMounts:
         - name: nginx-config-volume
-          mountPath: /etc/nginx/nginx.conf
-          subPath: nginx.conf                      
+          mountPath: /etc/nginx/conf.d
+          subPath: default.conf                     
         resources:
           limits:
             memory: "64Mi"

@@ -13,5 +13,5 @@ namePrefix: jmiller-
 nameSuffix: -v1
 configMapGenerator:
 - files:
-  - nginx.config
+  - default.conf
   name: nginx-config
