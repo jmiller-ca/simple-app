@@ -13,12 +13,7 @@ spec:
       - name: nginx
         image: openresty/openresty:alpine
         ports:
-        - containerPort: 80
-        env:
-        - name: HOSTNAME
-          valueFrom:
-            fieldRef:
-              fieldPath: spec.hostname        
+        - containerPort: 80   
         envFrom:
         - configMapRef:
             name: kustom-sample-app-config 
