@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: kustom-sample-app
 spec:
+  replicas: 1
   template:
     spec:
       containers:
@@ -10,6 +11,9 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: kustom-sample-app-config
         resources:
           limits:
             memory: "64Mi"
