@@ -1,5 +1,7 @@
-bases:
+resources:
 - ../../base
+
+namespace: stage-simple-app
 
 patchesStrategicMerge:
  - replicas.yaml

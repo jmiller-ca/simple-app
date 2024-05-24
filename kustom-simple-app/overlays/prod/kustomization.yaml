@@ -1,5 +1,7 @@
-bases:
+resources:
 - ../../base
+
+namespace: prod-simple-app
 
 patchesStrategicMerge:
  - replicas.yaml

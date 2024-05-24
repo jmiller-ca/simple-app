@@ -1,9 +1,25 @@
-bases:
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
 - ../../base
 
-patchesStrategicMerge:
- - replicas.yaml
+namespace: dev-simple-app
+
+images:
+- name: nginx
+  newTag: stable
+
+replicas:
+- count: 2
+  name: kustom-sample-app
 
 configMapGenerator:
-- name: kustom-sample-app-config
-  env: config.properties
+- envs:
+  - config.properties
+  name: kustom-sample-app-config
+- files:
+  - index.html
+  name: nginx-html-mount
+  
+patches:
+- path: deployment.yaml
