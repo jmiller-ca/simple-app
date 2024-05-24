@@ -8,8 +8,5 @@ commonLabels:
 commonAnnotations:
   app: kustom-sample-app-annontations
 
-namePrefix:
-  jmiller-
-
 nameSuffix:
   -v1

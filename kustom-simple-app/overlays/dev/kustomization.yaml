@@ -4,6 +4,8 @@ bases:
 patchesStrategicMerge:
  - replicas.yaml
 
+namePrefix: dev- 
+
 configMapGenerator:
 - name: kustom-sample-app-config
   env: config.properties
