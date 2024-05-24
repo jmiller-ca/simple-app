@@ -3,6 +3,8 @@ bases:
 
 patchesStrategicMerge:
  - replicas.yaml
+ 
+namePrefix: production-
 
 configMapGenerator:
 - name: kustom-sample-app-config
