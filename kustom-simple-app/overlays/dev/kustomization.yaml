@@ -19,7 +19,7 @@ configMapGenerator:
   name: kustom-sample-app-config
 - files:
   - index.html
-  name: nginx-html-mount
+  name: nginx-html
   
 patches:
 - path: deployment.yaml
