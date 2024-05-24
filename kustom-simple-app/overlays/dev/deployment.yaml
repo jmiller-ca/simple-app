@@ -2,8 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kustom-sample-app
-spec:
+spec: 
+  template:
+    spec:
       containers:
+      - name: nginx
         volumeMounts:
         - name: nginx-html-mount
           mountPath: /usr/share/nginx/html  
