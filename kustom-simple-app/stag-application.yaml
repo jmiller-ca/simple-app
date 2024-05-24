@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: stage-simple-app
+spec:
+  destination:
+    name: ''
+    namespace: stage-simple-app
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kustom-simple-app/overlays/stage
+    repoURL: 'https://github.com/jmiller-ca/simple-app'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: false
+      selfHeal: false

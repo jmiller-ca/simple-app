@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-simple-app
+spec:
+  destination:
+    name: ''
+    namespace: dev-simple-app
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kustom-simple-app/overlays/dev
+    repoURL: 'https://github.com/jmiller-ca/simple-app'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
