@@ -1,0 +1,9 @@
+bases:
+- ../../base
+
+patchesStrategicMerge:
+ - replicas.yaml
+
+configMapGenerator:
+- name: kustom-sample-app-config
+  env: config.properties
