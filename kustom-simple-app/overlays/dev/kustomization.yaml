@@ -17,9 +17,11 @@ configMapGenerator:
 - envs:
   - config.properties
   name: kustom-sample-app-config
+configMapGenerator:
+- envs:
+  - config.properties
+  name: kustom-sample-app-config
 - files:
   - index.html
   name: nginx-html
-  
-patches:
-- path: deployment.yaml
+  behavior: replace

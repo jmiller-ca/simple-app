@@ -11,3 +11,7 @@ commonAnnotations:
 nameSuffix:
   -v1
 
+configMapGenerator:
+- files:
+  - index.html
+  name: nginx-html
